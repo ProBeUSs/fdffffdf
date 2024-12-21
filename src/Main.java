@@ -5,25 +5,21 @@ import java.awt.event.ActionListener;
 
 public class Main {
     public static void main(String[] args) {
-        // Створюємо головне вікно
         JFrame f = new JFrame("Калькулятор");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(300, 400);
 
-        // Панель для елементів
         JPanel p = new JPanel();
         p.setLayout(new BorderLayout());
 
-        // Поле для вводу
         JTextField a = new JTextField();
         a.setHorizontalAlignment(JTextField.RIGHT);
         p.add(a, BorderLayout.NORTH);
 
-        // Панель для кнопок
         JPanel b = new JPanel();
         b.setLayout(new GridLayout(4, 4, 5, 5));
 
-        // Масив кнопок
+
         String[] c = {
                 "7", "8", "9", "/",
                 "4", "5", "6", "*",
@@ -31,7 +27,7 @@ public class Main {
                 "0", ".", "=", "+"
         };
 
-        // Змінні для обчислень
+
         final String[] firstNum = {""};
         final String[] operator = {""};
         final boolean[] isOperatorPressed = {false};
